@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap');
+
+body{
+    margin:0;
+    font-family: 'Raleway', sans-serif;
+}
+.navbar {
+    display: flex;
+    flex-wrap: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(60deg,#c9b2c5,#afb6e5);
+    padding: 8px 12px;
+  }
+  .navbar__logo a{
+      color:white;
+      text-decoration: none;
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  .navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .navbar__menu li:hover {
+    /* background-color: #DDCFC8; */
+    border-radius: 4px;
+  }
+  
+  .navbar__menu li a{
+    color: black;
+    text-decoration: none;
+    padding: 8px 12px;
+  }
+  .navbar__menu li a:hover{
+      font-weight:600;
+  }
+  .blink{
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    color: #524356;
+    font-weight: 400;
+  }
+  @keyframes blink {
+    from {opacity: 100%;}
+    to {opacity:0%;}
+  }
+  
+
+  /* ABOUT */
+
+  .about{
+    background: linear-gradient(60deg,#c9b2c5,#afb6e5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 66.5px) ;
+  }
+  .about .header-img{
+    height: 350px;
+    border-radius: 100%;
+    padding-top: 6rem;
+  }
+  .about .aboutText{
+    text-align: center;
+    color: white;
+    font-size: 21px;
+    margin-top: 2rem;
+  }
+  .to-contact{
+    display:flex;
+    align-itmes:center;
+    padding: 0.7rem 3rem;
+    background: #dad9d9;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    margin-top: 2rem;
+  }
+  .to-contact:hover{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+  .to-contact img{
+    height: 15px;
+    padding-right: 0.3rem;
+  }
+
+
+  /* CARDS */
+
+
+  .cards {
+    grid-column: 2 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 60px));
+    grid-gap: 40px;
+  }
+  
+  .card {
+    grid-column-end: span 4;
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeef3;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .card:hover {
+    transform: translateY(-7px);
+  }
+  
+  .card__image-container {
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .card__image-container img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .card__content {
+    padding: 10px 20px;
+  }
+  .card__content a{
+    padding: 0.5rem 2rem;
+    background: linear-gradient(60deg,#c9b2c5,#afb6e5);
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 2rem;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.card__content .techs{
+    font-size: 14px;
+    color: #464545;
+    margin-top: 2rem;
+}
+
+  .card__desc {
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 15px;
+  }
+  
+  .card__info {
+    display: flex;
+    align-self: end;
+    align-items: center;
+  }
+  
+  .card__price {
+    margin-left: auto;
+    padding: 5px 20px;
+    background-color: #303032;
+    border-radius: 20px;
+  }
+  
+
+
+  /* SKILLS */
+  .skills{
+      background-image:radial-gradient(rgb(255 255 255 / 90%),rgb(206 202 220 / 61%))
+      ,url('./assets/skillsBg.jpg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-wrap:wrap;
+      height: 80vh;
+  }
+  .skills>div, .skills>h1{
+    width: 50%;
+    
+  }
+  .skills>h1{
+    font-size: 30px;
+  }
+.skills>.skillContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+.skills img{
+    height: 70px;
+}
+.skills>.skillContainer>div{
+    width:23%;
+    padding:0 1%;
+}
+.skills>.skillContainer>div:hover{
+    transform: translateY(-7px);
+
+}
+
+
+/* Edu */
+.edu{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Project */
+.Project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:90vh;
+}
+.Project>.title{
+    font-size: 30px;
+    margin:3rem 0;
+}
+
+/* footer */
+.footer {
+    /* background-color: #E58087; */
+    color: ##FEF4D7;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 2rem;
+  }
+
+  
+.contact-box {
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    box-shadow:rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  }
+  .contact-links, .contact-form-wrapper {
+    width: 50%;
+    padding: 8% 5% 10% 5%;
+  }
+  
+  
+  .contact-links {
+    /* background-color: #1f2e43; */
+    background:
+    radial-gradient(
+        circle at 55% 92%, #c9b2c573 0 12%, transparent 12.2%
+      ), 
+      radial-gradient(
+        circle at 94% 72%, #ded7fe 0 10%, transparent 10.2%
+      ), 
+      radial-gradient(
+        circle at 20% max(78%, 350px), #ddcfc8 0 7%, transparent 7.2%
+      ), 
+      radial-gradient(
+        circle at 0% 0%, #c9b2c5 0 40%, transparent 40.2%
+      ), 
+      #f4f9ff;
+    border-radius: 10px 0 0 10px;
+  }
+  .contact-links>.links{
+    display: flex;
+  }
+  .contact-links>.links>.link{
+    padding-right: 1.4rem;
+  }
+  .contact-form-wrapper {
+    background-color: #ffffff8f;
+    border-radius: 0 10px 10px 0;
+  }
+  .contact-form-wrapper form{
+    width: 80%;
+    margin: auto;
+  }
+  .contact-form-wrapper .form-item{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form-wrapper input, .contact-form-wrapper textarea{
+    border: honeydew;
+    border-radius: 7px;
+    padding: 0.8rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 1rem 0;
+    color: grey;
+  }
+  .contact-form-wrapper input:focus-visible, .contact-form-wrapper textarea:focus-visible{
+      outline:none;
+  }
+  .contact-form-wrapper .form-txt{
+    color: #785e72;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .submit-btn{
+    border: 1px solid black;
+    color: black;
+    padding: 0.6rem 2.5rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    font-size: 15px;
+    font-weight: 300;
+    cursor:pointer;
+    background:transparent;
+  }
+  .submit-btn:hover{
+    color:white;
+    background:black;
+  }
