@@ -11,7 +11,7 @@ function sendMsg(){
         email:email
     }
 
-    emailjs.send('service_quqhtl9', 'template_msv6m8d', templateParams, 'user_NSOXI1OzkN09to6um6fQX')
+    emailjs.send('', '', '', '')
     .then(function(response) {
       console.log('SUCCESS!', response.status, response.text);
       document.getElementById("form").reset();
